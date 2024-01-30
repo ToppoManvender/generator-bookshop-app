@@ -115,6 +115,16 @@ export class EventListComponent implements OnInit {
           this.upcomingEvents.splice(index, 1);
         }
 
+        const indexRecent = this.recentEvents.findIndex(
+          (event: any) => event._id === id
+        );
+        if (indexRecent !== -1) {
+          this.recentEvents.splice(indexRecent, 1);
+          
+        }
+
+        
+
         this.toastr.success('Event deleted successfully!', 'Success', {
           positionClass: 'toast-bottom-right',
           closeButton: true,

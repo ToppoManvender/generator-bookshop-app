@@ -13,7 +13,10 @@ let Event = new Schema(
     },
   },
   {
-    collection: "Event",
+    timestamps:true
+  },
+  {
+    collection: "events",
   }
 );
 
